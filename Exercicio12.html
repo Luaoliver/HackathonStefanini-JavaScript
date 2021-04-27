@@ -1,0 +1,28 @@
+<!-- Com o conhecimento de objetos em mãos construa um programinha de controle de convidados mais elaborado, considerando as propriedades:
+- Nome
+- Idade
+- CPF
+Permita que o cadastrante digite estas informações em nosso array de convidados. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+     
+        <script type="text/javascript">
+            var convidado = [];
+
+            while(true) {
+	            var entrada = prompt("Digite S para sair ou I para iniciar/continuar");
+	            if (entrada == 'S') {
+		            break;
+	            } else if (entrada == "I") {
+		            convidado.push({nome: (prompt("Digite seu nome:")), idade: (prompt("Digite sua idade:")), cpf: (prompt("Digite seu cpf"))});
+	            }
+            }
+
+            
+            console.log(convidado);
+
+        </script>
+     
+      </head>
+</html>

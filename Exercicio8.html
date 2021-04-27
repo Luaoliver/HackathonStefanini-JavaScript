@@ -1,0 +1,24 @@
+<!-- -->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+     
+        <script type="text/javascript">
+            var numeroUm = Number(prompt ("VAMOS SOMAR DOIS NUMEROS. Digite seu primeiro número."));
+            var numeroDois= Number(prompt ("Digite seu segundo numero."));
+     
+            function soma(){
+                
+                var soma = (parseInt(numeroUm) + parseInt(numeroDois)) ;
+                //parseInt serve para receber a string que veio do prompt e transformá-la em um numero inteiro.
+                //caso não seja utilizado parseInt, os números serão concatenados ao invés de somados.
+
+                document.write("A soma dos dois numeros é: " + soma);
+            }
+
+            soma();
+
+      </script>
+     
+      </head>
+</html>

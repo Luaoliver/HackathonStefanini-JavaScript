@@ -1,0 +1,33 @@
+<!-- Incremente a nossa calculadora para receber os valores a partir dos dados digitados pelo usuário e mostrar como um alerta. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <h1>Calcule a media das suas notas:</h1>
+        <button onclick="media()">Calcular Média</button>
+     
+        <script type="text/javascript">
+            var notaUm = Number;
+            var notaDois= Number;
+            var notaTres = Number;
+            var notaQuatro = Number;
+            
+            notaUm = prompt ("Digite sua primeira nota.");
+            notaDois = prompt ("Digite sua segunda nota.");
+            notaTres = prompt ("Digite sua terceira nota.");
+            notaQuatro = prompt ("Digite sua quarta nota.");
+            //o valor que prompt retorna será sempre uma string.
+     
+            function media(){
+                
+            
+                var media = (parseInt(notaUm) + parseInt(notaDois) + parseInt(notaTres) + parseInt(notaQuatro))/4 ;
+                //parseInt serve para receber a string que veio do prompt e transformá-la em um numero inteiro.
+                //caso não seja utilizado parseInt, os números serão concatenados ao invés de somados.
+
+                document.write("Sua média é: " + media);
+        
+            }
+      </script>
+     
+      </head>
+</html>

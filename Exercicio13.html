@@ -1,0 +1,53 @@
+<!-- Adicione no sistema de controle de convidados as funções de filtro para barrar as pessoas com menos de 18 anos. Que possa  melhorar
+a organização de cobrança e ordenar por nome, já que no futuro evento é necessário estar ordenado para conferência mais rápida de nomes.
+
+Array de convidados:
+
+var convidados = [
+	{nome: 'Felipe', idade: 29, genero: 'masculino'},
+	{nome: 'Allana', idade: 22, genero: 'feminino'},
+	{nome: 'Thiago', idade: 33, genero: 'masculino'},
+	{nome: 'Carlos', idade: 16, genero: 'masculino'},
+	{nome: 'Aline', idade: 15, genero: 'feminino'}
+]; -->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+     
+        <script type="text/javascript">
+            var convidados = [
+                {nome: 'Felipe', idade: 29, genero: 'masculino'},
+	            {nome: 'Allana', idade: 22, genero: 'feminino'},
+	            {nome: 'Thiago', idade: 33, genero: 'masculino'},
+	            {nome: 'Carlos', idade: 16, genero: 'masculino'},
+	            {nome: 'Aline', idade: 15, genero: 'feminino'}
+            ];
+
+            var barrados = convidados.filter(function(convidadobarrado){
+                return convidadobarrado.idade<18;
+            });
+
+            var naoBarrados = convidados.filter(function(convidadoNaoBarrado){
+                return convidadoNaoBarrado.idade>=18;
+            })
+
+            var ordemBarrados = barrados.sort(function (x, y){
+                let a = x.nome.toUpperCase(),
+                    b = y.nome.toUpperCase();
+                return a == b ? 0 : a > b ? 1 : -1;
+            }); // responsável por colocar os nomes barrados em ordem alfabética.
+
+            var ordemNaoBarrados = naoBarrados.sort(function (x, y) {
+                let a = x.nome.toUpperCase(),
+                    b = y.nome.toUpperCase();
+                return a == b ? 0 : a > b ? 1 : -1;
+            }); // responsável por colocar os convidados não barrados em ordem alfabética.
+
+            console.log(ordem); // apresentará apenas os convidados não barrados em ordem alfabética.
+
+            
+
+        </script>
+     
+      </head>
+</html>

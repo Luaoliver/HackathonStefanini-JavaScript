@@ -1,0 +1,28 @@
+<!-- Crie uma calculadora que armazene os valores em variáveis, somando-as e armazenado o resultado em uma variável.-->
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <h1>Calcule a media das suas notas:</h1>
+      Nota número 01 <input id="nota1" type="number"> <br />
+      Nota número 02 <input id="nota2" type="number"> <br />
+      Nota número 03 <input id="nota3" type="number"> <br />
+      Nota número 04 <input id="nota4" type="number"> <br />
+      <button onclick="media()">Calcular Média</button>
+     
+      <script type="text/javascript">
+     
+         function media(){
+            var nota1 = parseFloat(document.getElementById("nota1").value);
+            var nota2 = parseFloat(document.getElementById("nota2").value);
+            var nota3 = parseFloat(document.getElementById("nota3").value);
+            var nota4 = parseFloat(document.getElementById("nota4").value);
+        
+            var media = (nota1 + nota2 + nota3 + nota4)/4 ;
+
+            document.write("Sua média é: " + media);
+     
+         }
+      </script>
+     
+   </head>
+</html>
